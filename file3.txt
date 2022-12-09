@@ -1,0 +1,4 @@
+$cmd = 'Add-Type -AssemblyName PresentationCore,PresentationFramework;[System.Windows.MessageBox]::Show(''working'')'
+$encodedCmd = [Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes($cmd))
+
+powershell.exe -EncodedCommand $encodedCmd
